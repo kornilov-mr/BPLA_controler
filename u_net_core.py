@@ -13,8 +13,6 @@ import os # Импортируем библиотеку os для раоты с 
 def dice_coef(y_true, y_pred):
     return ( 2.* K.sum(y_true * y_pred) + 1.) / (K.sum(y_true) + K.sum(y_pred) + 1.)
 
-from google.colab import drive 
-drive.mount('/content/drive')
 !mkdir -p data
 !cp /content/drive/MyDrive/neuro/dataset1.zip /content/data/
 !unzip data/dataset1.zip -d data
